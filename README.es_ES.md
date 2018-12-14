@@ -1,4 +1,4 @@
-![NUU Group](images/logo.es_ES.png)
+![Convenciones de Estilo NUU: Lenguaje de Programación Elixir](images/logo.es_ES.png)
 
 ---
 
@@ -47,7 +47,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
     Si usas Git puede que quieras utilizar la siguiente configuración para protegerte de que se te cuelen los finales de línea de Windows:
 
-    ```bash
+    ```sh
     git config --global core.autocrlf
     ```
 

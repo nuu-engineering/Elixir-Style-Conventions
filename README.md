@@ -1,4 +1,4 @@
-![NUU Group](images/logo.png)
+![NUU Style Conventions: Elixir Programming Language](images/logo.png)
 
 ---
 
@@ -47,7 +47,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
     If you're using Git you might want to add the following configuration setting to protect your project from Windows line endings creeping in:
 
-    ```bash
+    ```sh
     git config --global core.autocrlf
     ```
 
