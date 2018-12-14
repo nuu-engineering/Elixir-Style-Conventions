@@ -83,23 +83,29 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
     result=2*5
     list =[ 1,<< 2 >> ,3 ]++[4 ,5 ]
     some_string|>String.trim()|>String.split( "-" )
-    for num<-list,do:num||0
-    def other_function( args,options\\[  ] ),do:some_function( )
+
+    for num<-list,do: num||0
+
     num = - 2
     inverse= ! bool
     Enum . map( list, some_function( ) )
     range = 1 .. 10
 
+    def other_function( args,options\\[  ] ),do: some_function( )
+
     # Preferred
     result = 2 * 5
     list = [1, <<2>>, 3] ++ [4, 5]
     some_string |> String.trim() |> String.split("-")
+
     for num <- list, do: num || 0
-    def other_function(args, options \\ []), do: some_function()
+
     num = -2
     inverse = !bool
     Enum.map(list, some_function())
     range = 1..10
+
+    def other_function(args, options \\ []), do: some_function()
     ```
 
 1. Use blank lines between `defs` to break up a function into logical paragraphs.
@@ -430,7 +436,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
       x + acc
     end
 
-    # This actually parses as: rem(2, (3 |> g))
+    # This actually parses as: rem(2, (3 |> g()))
     2 |> rem 3 |> g
 
     def my_func do
@@ -445,7 +451,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
       x + acc
     end)
 
-    2 |> rem(3) |> g
+    2 |> rem(3) |> g()
 
     def my_func do
       # This is clearly a function call.
@@ -1139,13 +1145,13 @@ Custom types should be defined at the top of the module with the other directive
 1. When writing ExUnit assertions, be consistent with the order of the expected and actual values under testing. Prefer placing the expected result on the right, unless the assertion is a *pattern match*.
 
     ```elixir {.line-numbers}
-    # Preferred - Expected result on the right.
-    assert actual_function(1) == true
-    assert actual_function(2) == false
-
     # Not preferred - Inconsistent order.
     assert actual_function(1) == true
     assert false == actual_function(2)
+
+    # Preferred - Expected result on the right.
+    assert actual_function(1) == true
+    assert actual_function(2) == false
 
     # Required - The assertion is a pattern match.
     assert {:ok, expected} = actual_function(3)

@@ -83,23 +83,29 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     result=2*5
     list =[ 1,<< 2 >> ,3 ]++[4 ,5 ]
     some_string|>String.trim()|>String.split( "-" )
-    for num<-list,do:num||0
-    def other_function( args,options\\[  ] ),do:some_function( )
+
+    for num<-list,do: num||0
+
     num = - 2
     inverse= ! bool
     Enum . map( list, some_function( ) )
     range = 1 .. 10
 
+    def other_function( args,options\\[  ] ),do: some_function( )
+
     # Recomendado
     result = 2 * 5
     list = [1, <<2>>, 3] ++ [4, 5]
     some_string |> String.trim() |> String.split("-")
+
     for num <- list, do: num || 0
-    def other_function(args, options \\ []), do: some_function()
+
     num = -2
     inverse = !bool
     Enum.map(list, some_function())
     range = 1..10
+
+    def other_function(args, options \\ []), do: some_function()
     ```
 
 1. Utiliza líneas en blanco entre estructuras `def` para separar las funciones en párrafos lógicos.
@@ -384,7 +390,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     <<0xEF, 0xBB, 0xBF>>
     ```
 
-1. Termina cada fichero con una nueva línea.
+1. Termina cada archivo con una nueva línea.
 
 ### Sintaxis
 
@@ -430,7 +436,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
       x + acc
     end
 
-    # Esto en realidad se interpreta como: rem(2, (3 |> g))
+    # Esto en realidad se interpreta como: rem(2, (3 |> g()))
     2 |> rem 3 |> g
 
     def my_func do
@@ -445,7 +451,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
       x + acc
     end)
 
-    2 |> rem(3) |> g
+    2 |> rem(3) |> g()
 
     def my_func do
       # Esto es claramente una llamada a función.
@@ -453,7 +459,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     end
     ```
 
-1. Para los macros vemos un comportamiento contrario.
+1. Para los macros vemos un comportamiento contrario. La manera recomendada es no usar paréntesis.
 
     ```elixir {.line-numbers}
     # No recomendado
@@ -526,7 +532,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     end
     ```
 
-1. Omite la opción `else` en una sentencia  `if` o `unless` si este regresa **nil**.
+1. Omite la opción `else` en una sentencia  `if` o `unless` si esta regresa **nil**.
 
     ```elixir {.line-numbers}
     # No recomendado
@@ -1138,13 +1144,13 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 1. Cuando escribas aserciones con ExUnit, se consistente con el orden de los valores esperados y actuales que estás probando. Es preferible poner el valor esperado a la derecha, a no ser que la aserción sea un *pattern match*.
 
     ```elixir {.line-numbers}
-    # Recomendado - Resultado esperado a la derecha.
-    assert actual_function(1) == true
-    assert actual_function(2) == false
-
     # No recomendado - Orden incosistente.
     assert actual_function(1) == true
     assert false == actual_function(2)
+
+    # Recomendado - Resultado esperado a la derecha.
+    assert actual_function(1) == true
+    assert actual_function(2) == false
 
     # Requerido - La aserción es un pattern match.
     assert {:ok, expected} = actual_function(3)
