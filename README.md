@@ -34,7 +34,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Do not use semicolon to end the line, simply use a line ending.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     some_function();
 
@@ -52,7 +52,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use two spaces per indentation level. No hard tabs.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred (4 spaces)
     def some_function do
         do_something()
@@ -74,7 +74,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
     > Note: The operators `+` `-` are overloaded, they exist with one-arity and two-arity. When used with one-arity, no spaces are required. When are used with two-arity, spaces are placed around the operator.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     result=2*5
     list =[ 1,<< 2 >> ,3 ]++[4 ,5 ]
@@ -106,7 +106,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use blank lines between `defs` to break up a function into logical paragraphs.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     def some_function(some_data) do
       altered_data = Module.function(data)
@@ -134,7 +134,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Run single-line `defs` that match for the same function together, but separate multiline `defs` with a blank line.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     def some_function(nil), do: {:error, "No Value"}
 
@@ -158,7 +158,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. If the function head and `do:` clause are too long to fit on the same line, put `do:` on a new line, indented one level more than the previous line.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     def some_function([:foo, :bar, :baz] = args),
       do: Enum.map(args, fn arg -> arg <> " is on a very long line!" end)
@@ -166,7 +166,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
     When the `do:` clause starts on its own line, treat it as a multiline `def` by separating it with blank lines.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     def some_function([]), do: :empty
     def some_function(_),
@@ -181,7 +181,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. If you have more than one multiline `def` matching the same function, do not use single-line `defs`.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     def some_function(nil), do: {:error, "No Value"}
     def some_function([]), do: :ok
@@ -214,7 +214,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use the pipe operator `|>` to chain functions together.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     String.strip(String.downcase(some_string))
 
@@ -238,7 +238,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use bare expresions in the first part of a function chain.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # THE WORST!
     # This actually parses as:
     # String.strip("nope" |> String.downcase())
@@ -253,7 +253,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Avoid using the pipe operator `|>` just once.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     some_string |> String.downcase()
 
@@ -263,7 +263,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use parentheses for one-arity functions when using the pipe operator `|>`.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     some_string |> String.downcase |> String.strip
 
@@ -273,7 +273,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Do not use anonymous functions in pipelines.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     some_string
     |> String.trim()
@@ -293,7 +293,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. When `case` or `cond` clauses span multiple lines, separate each clause with a blank line.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     case arg do
       true ->
@@ -314,7 +314,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. If a *list*, *tuple*, *map*, or *struct* spans multiple lines, put each element, as well as the opening and closing brackets, on its own line. Indent each element one level, but not the brackets.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     [:first_item, :second_item, :next_item,
     :final_item]
@@ -330,7 +330,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. When assigning a *list*, *tuple*, *map*, or *struct*, keep the opening bracket on the same line as the assignment.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     list =
     [
@@ -347,7 +347,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. After a multiline assignment add a blank line as separation.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     some_string =
       "Hello"
@@ -366,7 +366,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Add underscores to decimal literals that have six or more digits.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     num = 1000000
     num = 1_500
@@ -378,7 +378,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use uppercase letters when using hex literals.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     <<0xef, 0xbb, 0xbf>>
 
@@ -392,7 +392,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use parentheses when a `def` structure has arguments, and omit them when it doesn't.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     def some_function arg1, arg2 do
       ...
@@ -414,7 +414,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Never put a space between a function name and the opening parenthesis.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     f (3 + 2)
 
@@ -424,7 +424,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use always parentheses in function calls, especially inside a pipeline and in functions that do not receive arguments so they can be distinguished from variables. Starting in Elixir 1.4, the compiler will warn you about locations where this ambiguity exists.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     f 3
 
@@ -457,7 +457,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. For macros we see the contrary behaviour. The preferred way is to not use parentheses.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     if( valid?(username) ) do
       ...
@@ -483,14 +483,14 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use `do:` syntaxis for single line macros statement.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     if some_condition, do: # some_stuff
     ```
 
 1. If the arguments of a macro make the line too long, indent and align the successive arguments. Place the `do:` in a new line with one indentation level.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     with {:ok, foo} <- Keyword.fetch(opts, :foo),
          {:ok, bar} <- Keyword.fetch(opts, :bar),
@@ -499,7 +499,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. If the macro has a `do` block with more than one line, or has an `else` option, use multiline syntax.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     with {:ok, foo} <- Keyword.fetch(opts, :foo),
          {:ok, bar} <- Keyword.fetch(opts, :bar) do
@@ -512,7 +512,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Never use `unless` with `else`. Rewrite these with the positive case first with an `if` construct.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     unless success do
       IO.puts('failure')
@@ -530,7 +530,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Omit the `else` option in `if` and `unless` constructs if `else` returns **nil**.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     if byte_size(data) > 0, do: data, else: nil
 
@@ -540,7 +540,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use **true** as the last condition of the `cond` special form when you need a clause that always matches.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     cond do
       1 + 2 == 5 ->
@@ -568,7 +568,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use `or`, `and` and `not` for strictly boolean checks. Use `||`, `&&`, and `!` operators only if any of the arguments are non-boolean.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     is_atom(name) && name != nil
     is_binary(task) || is_atom(task)
@@ -582,7 +582,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Always use the special syntax for *keyword* lists.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     some_value = [{:a, "baz"}, {:b, "qux"}]
 
@@ -592,7 +592,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Omit square brackets from *keyword* lists whenever they are optional.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     some_function(foo, bar, [a: "baz", b: "qux"])
 
@@ -606,7 +606,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use *upper camel case* for modules (keep acronyms like HTTP, RFC, XML uppercase).
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defmodule Somemodule do
       ...
@@ -632,7 +632,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use *snake case* for *atoms*, functions and variables.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     :"some atom"
     :SomeAtom
@@ -656,7 +656,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. The names of macros (compile-time generated functions that return a boolean value) that can be used within *guards* should be prefixed with "is_".
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     defmacro is_cool(var) do
       quote do: unquote(var) == "cool"
@@ -665,7 +665,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. The names of functions that return a boolean value should have a trailing question mark "?" rather than the "is_" prefix.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     def cool?(var) do
       ...
@@ -674,7 +674,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. The private functions with the same name as public functions should have the "do_" prefix.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     def sum(list), do: do_sum(list, 0)
 
@@ -688,7 +688,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Place comments above the line they comment on.
 
-    ```elixir {.line-numbers}
+    ```elixir
     String.first(some_string) # Not preferred
 
     # Preferred
@@ -697,7 +697,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use one space between the leading "#" character of the comment and the text of the comment.
 
-    ```elixir {.line-numbers}
+    ```elixir
     #Not preferred
     String.first(some_string)
 
@@ -707,7 +707,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Comments longer than a word are capitalized, and sentences use punctuation. Use one space after periods.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     # these lowercase comments are missing punctuation
 
@@ -720,7 +720,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. The annotation keyword is uppercase, and is followed by a colon and a space, then a note describing the problem.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     # TODO: Deprecate in v1.5.
     def some_function(arg), do: {:ok, arg}
@@ -728,7 +728,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. In cases where the problem is so obvious that any documentation would be redundant, annotations may be left with no note. This usage should be the exception and not the rule.
 
-    ```elixir {.line-numbers}
+    ```elixir
     start_task()
 
     # FIXME
@@ -745,7 +745,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use `REVIEW` to note anything that should be looked at to confirm it is working as intended.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # REVIEW: Are we sure this is how the client does X currently?
     ```
 
@@ -757,7 +757,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use *snake case* file names for *upper camel case* module names.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     # file is called: some_module.ex
 
@@ -767,7 +767,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Represent each level of nesting within a module name as a directory.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     # file is called: parser/core/xml_parser.ex
 
@@ -777,7 +777,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Don't put a blank line after `defmodule`.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defmodule System.Accounts do
 
@@ -811,7 +811,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Add a blank line between each grouping, and sort the terms (like module names) alphabetically. Here's an overall example of how you should order things in your modules:
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     defmodule MyModule do
       @moduledoc """
@@ -849,7 +849,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use the `__MODULE__` pseudo variable when a module refers to itself. This avoids having to update any self-references when the module name changes.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     defmodule SomeProject.SomeModule do
       defstruct [:name]
@@ -860,7 +860,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
     If you want a prettier name for a module self-reference, set up an alias.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     defmodule SomeProject.SomeModule do
       alias __MODULE__, as: SomeModule
@@ -873,7 +873,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Avoid repeating fragments in module names and namespaces. This improves overall readability and eliminates ambiguous aliases.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defmodule Todo.Todo do
       ...
@@ -889,7 +889,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. If a function receives options, they must be grouped into a *keyword list* as the last argument, and with the operator `\\` an empty list will be assigned as default. Each option will have its own variable, wich is assigned the value of the corresponding *keyword* in the options argument with the `Keyword.get` method, or a default value in the case of not being provided.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     def some_function(arg, opt1 \\ "Default value 1", opt1 \\ 255, opt1 \\ false) do
       ...
@@ -911,7 +911,7 @@ Documentation in Elixir (when read either in IEx with h or generated with ExDoc)
 
 1. Use `@moduledoc false` if you do not intend on documenting the module.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defmodule SomeModule do
       ...
@@ -926,7 +926,7 @@ Documentation in Elixir (when read either in IEx with h or generated with ExDoc)
 
 1. Separate code after the `@moduledoc` with a blank line.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defmodule SomeModule do
       @moduledoc """
@@ -947,7 +947,7 @@ Documentation in Elixir (when read either in IEx with h or generated with ExDoc)
 
 1. Use *heredocs strings* with markdown for documentation.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defmodule SomeModule do
       @moduledoc "About the module"
@@ -984,7 +984,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Place `@typedoc` and `@type` definitions together, and separate each pair with a blank line.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     defmodule SomeModule do
       @moduledoc false
@@ -1001,7 +1001,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. If a union type is too long to fit on a single line, put each part of the type on a separate line, indented one level past the name of the type.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     @type long_union_type :: some_type | another_type | some_other_type |
     a_final_type
@@ -1016,7 +1016,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Name the main type for a module t, for example: the type specification for a *struct*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     defstruct name: nil, params: []
 
@@ -1028,7 +1028,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Place specifications right before the function definition, without separating them by a blank line.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     @spec some_function(term) :: result
 
@@ -1047,7 +1047,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Use a list of *atoms* for *struct* fields that default to **nil**, followed by the other *keywords*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defstruct name: nil, params: nil, active: true
 
@@ -1057,7 +1057,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Omit square brackets when the argument of a `defstruct` is a *keyword* list. Brackets will not be omitted if there is at least one *atom* in the list.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defstruct [params: [], active: true]
 
@@ -1070,7 +1070,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. If a *struct* definition spans multiple lines, put each element on its own line, keeping the elements aligned.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defstruct foo: "test", bar: true, baz: false,
       qux: false, quux: 1
@@ -1085,7 +1085,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. If a multiline *struct* requires brackets, format it as a multiline list:
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Preferred
     defstruct [
       :name,
@@ -1098,7 +1098,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Make exception names end with a trailing "Error".
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     defmodule BadHTTPCode do
       defexception [:message]
@@ -1116,7 +1116,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Use lowercase error messages when raising exceptions, with no trailing punctuation.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     raise ArgumentError, "This is not valid."
 
@@ -1128,7 +1128,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. Match *strings* using the string concatenator rather than binary patterns:
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred
     <<"my"::utf8, _rest::bytes>> = "my string"
 
@@ -1140,7 +1140,7 @@ Custom types should be defined at the top of the module with the other directive
 
 1. When writing ExUnit assertions, be consistent with the order of the expected and actual values under testing. Prefer placing the expected result on the right, unless the assertion is a *pattern match*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Not preferred - Inconsistent order.
     assert actual_function(1) == true
     assert false == actual_function(2)

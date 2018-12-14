@@ -34,7 +34,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. No utilices punto y coma al término de cada linea, utiliza simplemente el final de linea.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     some_function();
 
@@ -52,7 +52,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Usa dos espacios por nivel de indentación. No utilices tabulaciones.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado (4 espacios)
     def some_function do
         do_something()
@@ -74,7 +74,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
     > Nota: Los operadores `+` `-` están sobrecargados, y existen con aridad 1 y 2. Cuando se utilizan el operador unario, no se usan espacios. Cuando se utiliza el operador binario, se colocan espacios al rededor de este.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     result=2*5
     list =[ 1,<< 2 >> ,3 ]++[4 ,5 ]
@@ -106,7 +106,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza líneas en blanco entre estructuras `def` para separar las funciones en párrafos lógicos.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     def some_function(some_data) do
       altered_data = Module.function(data)
@@ -134,7 +134,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. No separes estructuras `def` que sean de una sola línea y que pertenezcan a la misma función. Pero si se trata de un `def` multilinea sí sepáralo con una línea en blanco.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     def some_function(nil), do: {:error, "No Value"}
 
@@ -158,7 +158,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Si utilizas la sintaxis `do:` en funciones y la línea que constituye el cuerpo de la función es demasiado larga, coloca el `do:` en una nueva línea con un nivel de indentación más que la línea anterior.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     def some_function([:foo, :bar, :baz] = args),
       do: Enum.map(args, fn arg -> arg <> " is on a very long line!" end)
@@ -166,7 +166,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
     Cuando la clausula `do:` se encuentra en su propia linea, se le considera un `def` multilinea y se separa con una linea en blanco.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     def some_function([]), do: :empty
     def some_function(_),
@@ -181,7 +181,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Si tienes dos o más estructuras `def` multilínea pertenecientes de una misma función, no utilices estructuras `def` de una sola línea en estas.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     def some_function(nil), do: {:error, "No Value"}
     def some_function([]), do: :ok
@@ -214,7 +214,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Usa el operador *pipe* `|>` para encadenar funciones una tras otra.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     String.strip(String.downcase(some_string))
 
@@ -238,7 +238,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza expresiones simples (*bare expresions*) como comienzo de una cadena de funciones.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # ¡NUNCA HAGAS ESTO!
     # Esto en realidad se interpreta como:
     # String.strip("nope" |> String.downcase())
@@ -253,7 +253,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Evita utilizar el operador *pipe* `|>` una única vez.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     some_string |> String.downcase()
 
@@ -263,7 +263,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Coloca parentesis en funciones unarias cuando utilizes el operador *pipe* `|>`.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     some_string |> String.downcase |> String.strip
 
@@ -273,7 +273,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. No utilices funciones anónimas en una cadena de funciones.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     some_string
     |> String.trim()
@@ -293,7 +293,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Cuando las claúsulas de las estructuras `case` o `cond` requieran varias líneas, separa cada claúsula con una linea en blanco.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     case arg do
       true ->
@@ -314,7 +314,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Si un *list*, *tuple*, *map* o *struct* requiere varias líneas al declararse, se deberá colocar cada elemento y los delimitadores en una línea própia. Indenta un nivel cada elemento, pero no los delimitadores.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     [:first_item, :second_item, :next_item,
     :final_item]
@@ -330,7 +330,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Cuando asignes un *list*, *tuple*, *map* o *struct*, manten el delimitador de apertura en la misma linea de asignación.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     list =
     [
@@ -347,7 +347,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Después de una asignación multilínea añade una línea en blanco como separación.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     some_string =
       "Hello"
@@ -366,7 +366,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Agrega un guión bajo para separar en millares las literales decimales de seis dígitos o más.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     num = 1000000
     num = 1_500
@@ -378,7 +378,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza letras mayúsculas cuando uses literales hexadecimales.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     <<0xef, 0xbb, 0xbf>>
 
@@ -392,7 +392,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Usa paréntesis al declarar una estructura `def` con uno o más argumentos, y omítelos cuando la estructura no reciba argumentos.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     def some_function arg1, arg2 do
       ...
@@ -414,7 +414,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Nunca dejes un espacio entre el nombre de la función y el paréntesis de apertura.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     f (3 + 2)
 
@@ -424,7 +424,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza siempre paréntesis en las llamadas a funciones, sobretodo dentro de un *pipeline* y en funciones que no reciban argumentos de tal forma que puedan ser distinguidas de las variables. A partir de Elixir 1.4, el compilador te avisará de los lugares en los que exista ambigüedad.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     f 3
 
@@ -457,7 +457,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Para los macros vemos un comportamiento contrario. La manera recomendada es no usar paréntesis.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     if( valid?(username) ) do
       ...
@@ -483,14 +483,14 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza la sintaxis `do:` cuando el contenido de un macro pueda establecerse de una sola línea.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     if some_condition, do: # some_stuff
     ```
 
 1. Si los argumentos de un macro vuelven la linea demasiado larga, indenta y alinea los argumentos sucesivos. Coloca el `do:` en una nueva linea con un nivel de indentación.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     with {:ok, foo} <- Keyword.fetch(opts, :foo),
          {:ok, bar} <- Keyword.fetch(opts, :bar),
@@ -499,7 +499,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Si el macro tiene un bloque `do` con más de una línea, o tiene una opción `else`, utiliza la sintaxis multilínea.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     with {:ok, foo} <- Keyword.fetch(opts, :foo),
          {:ok, bar} <- Keyword.fetch(opts, :bar) do
@@ -512,7 +512,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Nunca utilices `unless` con `else`. Reescríbelo poniendo el caso positivo primero con una sentencia `if`.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     unless success do
       IO.puts('failure')
@@ -530,7 +530,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Omite la opción `else` en una sentencia  `if` o `unless` si esta regresa **nil**.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     if byte_size(data) > 0, do: data, else: nil
 
@@ -540,7 +540,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza **true** como la última condición de `cond` cuando necesites una cláusula por defecto.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     cond do
       1 + 2 == 5 ->
@@ -568,7 +568,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza `or`, `and` y `not` para comparaciones extrictamente booleanas. Utiliza `||`, `&&`, y `!` cuando alguno de los argumentos sea no-booleano.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     is_atom(name) && name != nil
     is_binary(task) || is_atom(task)
@@ -582,7 +582,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza siempre la sintaxis especial para listas de *keywords*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     some_value = [{:a, "baz"}, {:b, "qux"}]
 
@@ -592,7 +592,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Omite los delimitadores de las listas de *keywords* siempre que sean opcionales.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     some_function(foo, bar, [a: "baz", b: "qux"])
 
@@ -606,7 +606,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza *upper camel case* para módulos (mantén los acrónimos como HTTP, RFC, XML en mayúsculas).
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defmodule Somemodule do
       ...
@@ -632,7 +632,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Usa *snake case* para *atoms*, funciones y variables.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     :"some atom"
     :SomeAtom
@@ -656,7 +656,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Los nombres de macros (funciones generadas en tiempo de compilación que devuelven un valor booleano) que puedan ser utilizadas dentro de *guards* deberían nombrarse con el prefijo "is_".
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     defmacro is_cool(var) do
       quote do: unquote(var) == "cool"
@@ -665,7 +665,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Los nombres de las funciones que regresen un valor booleano deberán de terminar en signo de interrogación "?" en lugar de tener un prefijo "is_".
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     def cool?(var) do
       ...
@@ -674,7 +674,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Las funciones privadas que compartan el mismo nombre con alguna función pública deben tener el prefijo "do_".
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     def sum(list), do: do_sum(list, 0)
 
@@ -688,7 +688,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Los comentarios se escriben en la línea inmediatamente superior al código que anotan.
 
-    ```elixir {.line-numbers}
+    ```elixir
     String.first(some_string) # No recomendado
 
     # Recomendado
@@ -697,7 +697,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza un espacio entre el carácter introductorio del comentario "#" y el resto del texto del comentario.
 
-    ```elixir {.line-numbers}
+    ```elixir
     #No recomendado
     String.first(some_string)
 
@@ -707,7 +707,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Los comentarios que sean más largos de una palabra se escribirán capitalizados, y las frases utilizarán signos de puntuación. Usa un espacio tras cada punto.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     # estos comentarios no inician en mayúsculas y falta puntuación
 
@@ -719,7 +719,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. La palabra clave para la anotación estará completamente en mayúsculas, seguida de dos puntos y un espacio, a continuación se añade la nota que describe el problema.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     # TODO: Deprecate in v1.5.
     def some_function(arg), do: {:ok, arg}
@@ -727,7 +727,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. En casos en los que el problema sea tan obvio que cualquier tipo de documentación resulte redundante, puedes poner las anotaciones sin ninguna  nota. Este uso debería de ser la excepción y no la norma.
 
-    ```elixir {.line-numbers}
+    ```elixir
     start_task()
 
     # FIXME
@@ -744,7 +744,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza `REVIEW` para denotar cualquier cosa que deba ser revisada para confirmar que funciona como se espera.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # REVIEW: Estamos seguros que es así como el cliente hace X actualmente?
     ```
 
@@ -756,7 +756,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza *snake case* para el nombre del fichero y *upper camel case* para el nombre del módulo.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     # nombre de archivo: some_module.ex
 
@@ -766,7 +766,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Representa cada nivel de anidación dentro del módulo como un directorio.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     # nombre de archivo: parser/core/xml_parser.ex
 
@@ -776,7 +776,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. No dejes una línea en blanco después de `defmodule`.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defmodule System.Accounts do
 
@@ -810,7 +810,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Añade una línea en blanco entre cada grupo, y ordena alfabéticamente los términos (como nombres de módulo). Aquí tienes un ejemplo general de cómo deberías ordenar el código en tus módulos:
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     defmodule MyModule do
       @moduledoc """
@@ -848,7 +848,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Usa la pseudo variable `__MODULE__` cuando un módulo se refiera a sí mismo. Esto evitará que tengas que actualizar cualquier referencia cuando el nombre del módulo cambie.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     defmodule SomeProject.SomeModule do
       defstruct [:name]
@@ -859,7 +859,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
     Si prefieres utilizar otro nombre para esta referencia, define un alias.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     defmodule SomeProject.SomeModule do
       alias __MODULE__, as: SomeModule
@@ -872,7 +872,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Evita repeticiones en los nombres de módulos y espacios de nombrado. Mejorará la legibilidad global y elimina alias ambiguos.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defmodule Todo.Todo do
       ...
@@ -888,7 +888,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Si una función recibe opciones, estas se deberán agrupar en un *keyword list* como último argumento, y con el operador `\\` se asignará una lista vacia como default. Cada opción tendrá su propia variable, a la cual se le asigna el valor del *keyword* correspondiente en el argumento opciones mediante el método `Keyword.get`, o un valor default en caso de no ser proporcionado.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     def some_function(arg, opt1 \\ "Default value 1", opt1 \\ 255, opt1 \\ false) do
       ...
@@ -910,7 +910,7 @@ La documentación en Elixir (ya sea cuando es leída en IEx mediante h o cuando 
 
 1. Utiliza `@moduledoc false` si no pretendes documentar un módulo.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defmodule SomeModule do
       ...
@@ -925,7 +925,7 @@ La documentación en Elixir (ya sea cuando es leída en IEx mediante h o cuando 
 
 1. Separa el código tras `@moduledoc` con una línea en blanco.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defmodule SomeModule do
       @moduledoc """
@@ -946,7 +946,7 @@ La documentación en Elixir (ya sea cuando es leída en IEx mediante h o cuando 
 
 1. Usa *heredocs strings* con markdown para la documentación.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defmodule SomeModule do
       @moduledoc "About the module"
@@ -983,7 +983,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Sitúa las definiciones `@typedoc` y `@type` juntas, y separa cada par con una línea en blanco.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     defmodule SomeModule do
       @moduledoc false
@@ -1000,7 +1000,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Si la unión de tipos es demasiado larga para caber en una sola línea, añade una nueva línea e indenta un nivel más para mantener los tipos alineados.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     @type long_union_type :: some_type | another_type | some_other_type |
     a_final_type
@@ -1015,7 +1015,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Nombra al tipo principal para un módulo t, por ejemplo: la especificación de tipo para un *struct*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     defstruct name: nil, params: []
 
@@ -1027,7 +1027,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Sitúa las especificaciones justo antes de la definición de la función, sin separarlas con una línea en blanco.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     @spec some_function(term) :: result
 
@@ -1046,7 +1046,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Usa una lista de *atoms* para los campos del *struct* que tengan valor **nil**, seguida del resto de *keywords*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defstruct name: nil, params: nil, active: true
 
@@ -1056,7 +1056,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Omite los corchetes cuando el argumento de `defstruct` sea una lista de *keywords*. No se omitirán si en la lista existe por lo menos un *atom*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defstruct [params: [], active: true]
 
@@ -1069,7 +1069,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Si una definición de un *struct* despliega múltiples líneas, coloca cada elemento en su propia linea, manteniendo los elementos alineados.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defstruct foo: "test", bar: true, baz: false,
       qux: false, quux: 1
@@ -1084,7 +1084,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Si un *struct* multilínea requiere limitadores, dale formato de lista multilinea.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # Recomendado
     defstruct [
       :name,
@@ -1097,7 +1097,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Haz que los nombres de las excepciones terminen en "Error".
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     defmodule BadHTTPCode do
       defexception [:message]
@@ -1115,7 +1115,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Utiliza mensajes de error en minúsculas cuando lances excepciones. No utilices puntuación al final.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     raise ArgumentError, "This is not valid."
 
@@ -1127,7 +1127,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Haz match de *strings* utilizando la concatenación de string en lugar de patrones binarios:
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado
     <<"my"::utf8, _rest::bytes>> = "my string"
 
@@ -1139,7 +1139,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 1. Cuando escribas aserciones con ExUnit, se consistente con el orden de los valores esperados y actuales que estás probando. Es preferible poner el valor esperado a la derecha, a no ser que la aserción sea un *pattern match*.
 
-    ```elixir {.line-numbers}
+    ```elixir
     # No recomendado - Orden incosistente.
     assert actual_function(1) == true
     assert false == actual_function(2)
