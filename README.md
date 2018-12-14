@@ -1,7 +1,7 @@
 ![NUU Style Conventions: Elixir Programming Language](images/logo.png)
 ---
 
-## Contenido / Contents
+## Contents
 
 - [**Guide**](#guide)
   - [Source Code Layout](#source-code-layout)
