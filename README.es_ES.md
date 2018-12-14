@@ -1,7 +1,7 @@
 ![Convenciones de Estilo NUU: Lenguaje de Programación Elixir](images/logo.es_ES.png)
 ---
 
-## Contenido
+## Tabla de Contenido
 
 - [**Guía**](#guía)
   - [Disposición del Código Fuente (Layout)](#disposición-del-código-fuente-layout)
