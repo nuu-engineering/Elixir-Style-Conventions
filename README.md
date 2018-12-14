@@ -1,6 +1,5 @@
 ![NUU Style Conventions: Elixir Programming Language](images/logo.png)
-
----
+=========
 
 ## Contenido / Contents
 
@@ -73,7 +72,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
     | Space after | `,` `:` `not` |
     | Spaces around | `*` `/` `+` `-` `++` `--` `<>` `in` `not in` `\|>` `<<<` `>>>` `~>>` `<<~` `~>` `<~` `<~>` `<\|>` `<` `>` `<=` `>=` `==` `!=` `=~` `===` `!==` `&&` `&&&` `and` `\|\|` `\|\|\|` `or` `=` `=>` `::` `when` `<-` `\\` |
 
-    Note: The operators `+` `-` are overloaded, they exist with one-arity and two-arity. When used with one-arity, no spaces are required. When are used with two-arity, spaces are placed around the operator.
+    > Note: The operators `+` `-` are overloaded, they exist with one-arity and two-arity. When used with one-arity, no spaces are required. When are used with two-arity, spaces are placed around the operator.
 
     ```elixir {.line-numbers}
     # Not preferred

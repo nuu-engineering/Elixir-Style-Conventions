@@ -73,7 +73,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     | Espacio después | `,` `:` `not` |
     | Espacios alrededor | `*` `/` `+` `-` `++` `--` `<>` `in` `not in` `\|>` `<<<` `>>>` `~>>` `<<~` `~>` `<~` `<~>` `<\|>` `<` `>` `<=` `>=` `==` `!=` `=~` `===` `!==` `&&` `&&&` `and` `\|\|` `\|\|\|` `or` `=` `=>` `::` `when` `<-` `\\` |
 
-    Nota: Los operadores `+` `-` están sobrecargados, y existen con aridad 1 y 2. Cuando se utilizan el operador unario, no se usan espacios. Cuando se utiliza el operador binario, se colocan espacios al rededor de este.
+    > Nota: Los operadores `+` `-` están sobrecargados, y existen con aridad 1 y 2. Cuando se utilizan el operador unario, no se usan espacios. Cuando se utiliza el operador binario, se colocan espacios al rededor de este.
 
     ```elixir {.line-numbers}
     # No recomendado
