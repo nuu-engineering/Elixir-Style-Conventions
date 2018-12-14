@@ -1,5 +1,4 @@
 ![Convenciones de Estilo NUU: Lenguaje de Programación Elixir](images/logo.es_ES.png)
-
 ---
 
 ## Contenido

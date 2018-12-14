@@ -1,5 +1,5 @@
 ![NUU Style Conventions: Elixir Programming Language](images/logo.png)
-=========
+---
 
 ## Contenido / Contents
 
