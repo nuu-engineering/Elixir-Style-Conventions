@@ -2,35 +2,35 @@
 
 ## Contenido
 
-- [**Idiomas**](#languages)
-- [**Guía**](#guide)
-  - [Disposición del Código Fuente (Layout)](#layout)
-  - [Sintaxis](#syntax)
-  - [Nombrado](#naming)
-  - [Comentarios](#comments)
-    - [Comentarios de Anotación](#comment_annotations)
-  - [Módulos](#modules)
-  - [Funciones](#functions)
-  - [Documentación](#documentation)
+- [**Idiomas**](#idiomas)
+- [**Guía**](#guía)
+  - [Disposición del Código Fuente (Layout)](#disposición-del-código-fuente-layout)
+  - [Sintaxis](#sintaxis)
+  - [Nombrado](#nombrado)
+  - [Comentarios](#comentarios)
+    - [Comentarios de Anotación](#comentarios-de-anotación)
+  - [Módulos](#módulos)
+  - [Funciones](#funciones)
+  - [Documentación](#documentación)
   - [Typespecs](#typespecs)
   - [Structs](#structs)
-  - [Excepciones](#exceptions)
+  - [Excepciones](#excepciones)
   - [Strings](#strings)
-  - [Pruebas](#testing)
-- [**Derechos**](#copying)
-  - [Licencia](#license)
-  - [Atribución](#attribution)
+  - [Pruebas](#pruebas)
+- [**Derechos**](#derechos)
+  - [Licencia](#licencia)
+  - [Atribución](#atribución)
 
-## Idiomas {#languages}
+## Idiomas
 
-- [English](#README.en_US.md)
-- [Español](#README.es_ES.md)
+- [English](README.md)
+- [Español](README.es_ES.md)
 
-## Guía {#guide}
+## Guía
 
 Guía para la codificación homogenea en proyectos que requieran el uso del lenguaje de programación Elixir.
 
-### Disposición del Código Fuente (Layout) {#layout}
+### Disposición del Código Fuente (Layout)
 
 1. Evita lineas de más de 80 caracteres.
 
@@ -386,7 +386,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Termina cada fichero con una nueva línea.
 
-### Sintaxis {#syntax}
+### Sintaxis
 
 1. Usa paréntesis al declarar una estructura `def` con uno o más argumentos, y omítelos cuando la estructura no reciba argumentos.
 
@@ -598,7 +598,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     some_function(foo, bar, a: "baz", b: "qux")
     ```
 
-### Nombrado {#naming}
+### Nombrado
 
 1. Utiliza *snake case* para nombrar directorios y archivos, por ejemplo: `lib/my_app/task_server.ex`.
 
@@ -680,7 +680,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     defp do_sum([head | tail], total), do: do_sum(tail, head + total)
     ```
 
-### Comentarios {#comments}
+### Comentarios
 
 1. Escribe código expresivo e intenta transmitir la intención de tu programa a través de flujos de control, estructura y nombrado.
 
@@ -713,7 +713,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     # Comentario con puntuación correctamente utilizada.
     ```
 
-#### Comentarios de Anotación {#comment_annotations}
+#### Comentarios de Anotación
 
 1. La palabra clave para la anotación estará completamente en mayúsculas, seguida de dos puntos y un espacio, a continuación se añade la nota que describe el problema.
 
@@ -748,7 +748,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Utiliza claves de anotación propias si lo consideras oportuno, pero asegúrate de documentarlas en el fichero README de tu proyecto o similar.
 
-### Módulos {#modules}
+### Módulos
 
 1. Utiliza un archivo por módulo a no ser que el módulo sea utilizado únicamente de manera interna por otro módulo (como en el caso de una prueba).
 
@@ -882,7 +882,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     end
     ```
 
-### Funciones {#functions}
+### Funciones
 
 1. Si una función recibe opciones, estas se deberán agrupar en un *keyword list* como último argumento, y con el operador `\\` se asignará una lista vacia como default. Cada opción tendrá su propia variable, a la cual se le asigna el valor del *keyword* correspondiente en el argumento opciones mediante el método `Keyword.get`, o un valor default en caso de no ser proporcionado.
 
@@ -902,7 +902,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
     end
     ```
 
-### Documentación {#documentation}
+### Documentación
 
 La documentación en Elixir (ya sea cuando es leída en IEx mediante h o cuando es generada con ExDoc) utiliza los atributos de módulo `@moduledoc` y `@doc`.
 
@@ -973,7 +973,7 @@ La documentación en Elixir (ya sea cuando es leída en IEx mediante h o cuando 
     end
     ```
 
-### Typespecs {#typespecs}
+### Typespecs
 
 Typespecs es una notación para declarar tipos y especificaciones, ya sea para documentación o para la herramienta de análisis estático Dialyzer.
 
@@ -1040,7 +1040,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
     end
     ```
 
-### Structs {#structs}
+### Structs
 
 1. Usa una lista de *atoms* para los campos del *struct* que tengan valor **nil**, seguida del resto de *keywords*.
 
@@ -1091,7 +1091,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
     ]
     ```
 
-### Excepciones {#exceptions}
+### Excepciones
 
 1. Haz que los nombres de las excepciones terminen en "Error".
 
@@ -1121,7 +1121,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
     raise ArgumentError, "this is not valid"
     ```
 
-### Strings {#strings}
+### Strings
 
 1. Haz match de *strings* utilizando la concatenación de string en lugar de patrones binarios:
 
@@ -1133,7 +1133,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
     "my" <> _rest = "my string"
     ```
 
-### Pruebas {#testing}
+### Pruebas
 
 1. Cuando escribas aserciones con ExUnit, se consistente con el orden de los valores esperados y actuales que estás probando. Es preferible poner el valor esperado a la derecha, a no ser que la aserción sea un *pattern match*.
 
@@ -1150,13 +1150,13 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
     assert {:ok, expected} = actual_function(3)
     ```
 
-## Derechos {#copying}
+## Derechos
 
-### Licencia {#license}
+### Licencia
 
 ![Creative Commons License](http://i.creativecommons.org/l/by/3.0/88x31.png) Este documento está hecho bajo licencia [Creative Commons Reconocimiento 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/deed.es_ES).
 
-### Atribución {#attribution}
+### Atribución
 
 La estructura de esta guía, partes del código de ejemplo, y muchos otros puntos iniciales de este documento fueron tomados de:
 
