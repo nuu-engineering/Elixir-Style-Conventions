@@ -1,8 +1,9 @@
-# NUU Style Conventions: Elixir Programming Language
+![NUU Group](images/logo.png)
+
+---
 
 ## Contenido / Contents
 
-- [**Languages**](#languages)
 - [**Guide**](#guide)
   - [Source Code Layout](#source-code-layout)
   - [Syntax](#syntax)
@@ -17,14 +18,10 @@
   - [Exceptions](#exceptions)
   - [Strings](#strings)
   - [Testing](#testing)
+- [**Languages**](#languages)
 - [**Copying**](#copying)
   - [License](#license)
   - [Attribution](#attribution)
-
-## Languages
-
-- [English](README.md)
-- [Español](README.es_ES.md)
 
 ## Guide
 
@@ -1156,6 +1153,11 @@ Custom types should be defined at the top of the module with the other directive
     # Required - The assertion is a pattern match.
     assert {:ok, expected} = actual_function(3)
     ```
+
+## Languages
+
+- [English](README.md)
+- [Español](README.es_ES.md)
 
 ## Copying
 

@@ -1,8 +1,9 @@
-# Convenciones de estilo NUU: Lenguaje de Programación Elixir
+![NUU Group](images/logo.es_ES.png)
+
+---
 
 ## Contenido
 
-- [**Idiomas**](#idiomas)
 - [**Guía**](#guía)
   - [Disposición del Código Fuente (Layout)](#disposición-del-código-fuente-layout)
   - [Sintaxis](#sintaxis)
@@ -17,14 +18,10 @@
   - [Excepciones](#excepciones)
   - [Strings](#strings)
   - [Pruebas](#pruebas)
+- [**Idiomas**](#idiomas)
 - [**Derechos**](#derechos)
   - [Licencia](#licencia)
   - [Atribución](#atribución)
-
-## Idiomas
-
-- [English](README.md)
-- [Español](README.es_ES.md)
 
 ## Guía
 
@@ -1155,6 +1152,11 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
     # Requerido - La aserción es un pattern match.
     assert {:ok, expected} = actual_function(3)
     ```
+
+## Idiomas
+
+- [English](README.md)
+- [Español](README.es_ES.md)
 
 ## Derechos
 
