@@ -1154,8 +1154,8 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 ## Idiomas
 
-- [English](README.md)
 - [Español](README.es_ES.md)
+- [Inglés (English)](README.md)
 
 ## Derechos
 

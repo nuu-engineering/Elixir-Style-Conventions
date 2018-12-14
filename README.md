@@ -1156,7 +1156,7 @@ Custom types should be defined at the top of the module with the other directive
 ## Languages
 
 - [English](README.md)
-- [Español](README.es_ES.md)
+- [Spanish (Español)](README.es_ES.md)
 
 ## Copying
 
