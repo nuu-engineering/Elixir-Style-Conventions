@@ -890,7 +890,7 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
     ```elixir
     # No recomendado
-    def some_function(arg, opt1 \\ "Default value 1", opt1 \\ 255, opt1 \\ false) do
+    def some_function(arg, opt1 \\ "Default value 1", opt2 \\ 255, opt3 \\ false) do
       ...
     end
 
