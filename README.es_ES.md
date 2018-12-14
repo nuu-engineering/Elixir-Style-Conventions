@@ -66,11 +66,11 @@ Guía para la codificación homogenea en proyectos que requieran el uso del leng
 
 1. Usa espacios después de comas, dos puntos y alrededor de operadores. Exceptuando operadores unarios, el operador punto y el operador rango (punto-punto). No coloques espacios alrededor de parejas como llaves, paréntesis, etc. Los espacios son (en la mayoría de casos) irrelevantes para Elixir en tiempo de ejecución, pero su uso apropiado es clave para escribir código fácilmente legible.
 
-    | Regla de estilo | Operadores |
+    | <nobr>Regla de estilo</nobr> | Operadores |
     | :--- | :--- |
-    | Sin espacios | `@` `.` `+` `-` `!` `^` `&` `..` `~~~` `()` `[]` `{}` |
-    | Espacio después | `,` `:` `not` |
-    | Espacios alrededor | `*` `/` `+` `-` `++` `--` `<>` `in` `not in` `\|>` `<<<` `>>>` `~>>` `<<~` `~>` `<~` `<~>` `<\|>` `<` `>` `<=` `>=` `==` `!=` `=~` `===` `!==` `&&` `&&&` `and` `\|\|` `\|\|\|` `or` `=` `=>` `::` `when` `<-` `\\` |
+    | <nobr>Sin espacios</nobr> | `@` `.` `+` `-` `!` `^` `&` `..` `~~~` `()` `[]` `{}` |
+    | <nobr>Espacio después</nobr> | `,` `:` `not` |
+    | <nobr>Espacios alrededor</nobr> | `*` `/` `+` `-` `++` `--` `<>` `in` `not in` `\|>` `<<<` `>>>` `~>>` `<<~` `~>` `<~` `<~>` `<\|>` `<` `>` `<=` `>=` `==` `!=` `=~` `===` `!==` `&&` `&&&` `and` `\|\|` `\|\|\|` `or` `=` `=>` `::` `when` `<-` `\\` |
 
     > Nota: Los operadores `+` `-` están sobrecargados, y existen con aridad 1 y 2. Cuando se utilizan el operador unario, no se usan espacios. Cuando se utiliza el operador binario, se colocan espacios al rededor de este.
 

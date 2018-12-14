@@ -66,11 +66,11 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 
 1. Use spaces after commas, colons and around operators. Except for unary operators, the operator point and the operator rank (two points). Do not put spaces around matched pairs like brackets, parentheses, etc. Whitespace might be (mostly) irrelevant to the Elixir runtime, but its proper use is the key to writing easily readable code.
 
-    | Style rule | Operators |
+    | <nobr>Style rule</nobr> | Operators |
     | :--- | :--- |
-    | No spaces | `@` `.` `+` `-` `!` `^` `&` `..` `~~~` `()` `[]` `{}` |
-    | Space after | `,` `:` `not` |
-    | Spaces around | `*` `/` `+` `-` `++` `--` `<>` `in` `not in` `\|>` `<<<` `>>>` `~>>` `<<~` `~>` `<~` `<~>` `<\|>` `<` `>` `<=` `>=` `==` `!=` `=~` `===` `!==` `&&` `&&&` `and` `\|\|` `\|\|\|` `or` `=` `=>` `::` `when` `<-` `\\` |
+    | <nobr>No spaces</nobr> | `@` `.` `+` `-` `!` `^` `&` `..` `~~~` `()` `[]` `{}` |
+    | <nobr>Space after</nobr> | `,` `:` `not` |
+    | <nobr>Spaces around</nobr> | `*` `/` `+` `-` `++` `--` `<>` `in` `not in` `\|>` `<<<` `>>>` `~>>` `<<~` `~>` `<~` `<~>` `<\|>` `<` `>` `<=` `>=` `==` `!=` `=~` `===` `!==` `&&` `&&&` `and` `\|\|` `\|\|\|` `or` `=` `=>` `::` `when` `<-` `\\` |
 
     > Note: The operators `+` `-` are overloaded, they exist with one-arity and two-arity. When used with one-arity, no spaces are required. When are used with two-arity, spaces are placed around the operator.
 
