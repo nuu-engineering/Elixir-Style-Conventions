@@ -371,11 +371,11 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 1. Add underscores to decimal literals that have six or more digits.
 
     ```elixir {.line-numbers}
-    # not preferred
+    # Not preferred
     num = 1000000
     num = 1_500
 
-    # preferred
+    # Preferred
     num = 1_000_000
     num = 1500
     ```
@@ -383,10 +383,10 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 1. Use uppercase letters when using hex literals.
 
     ```elixir {.line-numbers}
-    # not preferred
+    # Not preferred
     <<0xef, 0xbb, 0xbf>>
 
-    # preferred
+    # Preferred
     <<0xEF, 0xBB, 0xBF>>
     ```
 
@@ -397,7 +397,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 1. Use parentheses when a `def` structure has arguments, and omit them when it doesn't.
 
     ```elixir {.line-numbers}
-    # not preferred
+    # Not preferred
     def some_function arg1, arg2 do
       ...
     end
@@ -406,7 +406,7 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
       ...
     end
 
-    # preferred
+    # Preferred
     def some_function(arg1, arg2) do
       ...
     end
@@ -419,10 +419,10 @@ Guide for homogeneous coding in projects that require the use of the Elixir prog
 1. Never put a space between a function name and the opening parenthesis.
 
     ```elixir {.line-numbers}
-    # not preferred
+    # Not preferred
     f (3 + 2)
 
-    # preferred
+    # Preferred
     f(3 + 2)
     ```
 
