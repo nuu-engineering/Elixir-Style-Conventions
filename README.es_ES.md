@@ -2,8 +2,6 @@
 ---
 [![NUU Group Documentation](https://img.shields.io/badge/NUU%20Group-Documentation-blue.svg?style=flat)](https://nuu.co/)
 
-[![StackShare][yellowbox-shield]][yellowbox-tech]
-
 ## Tabla de Contenido
 
 - [**Guía**](#guía)
