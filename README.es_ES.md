@@ -2,6 +2,8 @@
 ---
 [![NUU Group Documentation](https://img.shields.io/badge/NUU%20Group-Documentation-blue.svg?style=flat)](https://nuu.co/)
 
+[![StackShare][yellowbox-shield]][yellowbox-tech]
+
 ## Tabla de Contenido
 
 - [**Guía**](#guía)
@@ -1166,9 +1168,4 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 ### Atribución
 
-La estructura de esta guía, partes del código de ejemplo, y muchos otros puntos iniciales de este documento fueron tomados de:
-
-- [Christopher Adams' Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide)
-- [Alberto Almargo's Elixir Style Guide](https://github.com/albertoalmagro/elixir_style_guide)
-- [Aleksei Magusev's Elixir Style Guide](https://github.com/lexmag/elixir-style-guide)
-- [Credo's Elixir Style Guide](https://github.com/rrrene/elixir-style-guide)
+La estructura de esta guía, partes del código de ejemplo, y muchos otros puntos iniciales de este documento fueron tomados de las guías de estilo de Elixir de [Christopher Adams](https://github.com/christopheradams/elixir_style_guide), [Alberto Almargo](https://github.com/albertoalmagro/elixir_style_guide), [Aleksei Magusev](https://github.com/lexmag/elixir-style-guide) y [Credo](https://github.com/rrrene/elixir-style-guide).

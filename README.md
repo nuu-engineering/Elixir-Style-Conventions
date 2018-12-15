@@ -1167,9 +1167,4 @@ Custom types should be defined at the top of the module with the other directive
 
 ### Attribution
 
-The structure of this guide, bits of example code, and many of the initial points made in this document were borrowed from:
-
-- [Christopher Adams' Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide)
-- [Alberto Almargo's Elixir Style Guide](https://github.com/albertoalmagro/elixir_style_guide)
-- [Aleksei Magusev's Elixir Style Guide](https://github.com/lexmag/elixir-style-guide)
-- [Credo's Elixir Style Guide](https://github.com/rrrene/elixir-style-guide)
+The structure of this guide, bits of example code, and many of the initial points made in this document were borrowed from [Christopher Adams'](https://github.com/christopheradams/elixir_style_guide), [Alberto Almargo's](https://github.com/albertoalmagro/elixir_style_guide), [Aleksei Magusev's](https://github.com/lexmag/elixir-style-guide) and [Credo's](https://github.com/rrrene/elixir-style-guide) Elixir style guides.
