@@ -1,6 +1,6 @@
 ![NUU Style Conventions: Elixir Programming Language](images/logo.png)
 ---
-[![NUU Group Documentation](https://img.shields.io/badge/NUU%20Group-Documentation-blue.svg?style=flat)](https://nuu.co/)
+[![NUU Group Documents](https://img.shields.io/badge/NUU%20Group-Documents-blue.svg)](https://nuu.co/)
 
 ## Table of Contents
 
