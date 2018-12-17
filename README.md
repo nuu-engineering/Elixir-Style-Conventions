@@ -1,8 +1,9 @@
 ![NUU Style Conventions: Elixir Programming Language](images/logo.png)
 ---
-[![NUU Group Documents](https://img.shields.io/badge/NUU%20Group-Documents-blue.svg)](https://nuu.co/)
 
 Guide for homogeneous coding in projects that require the use of the Elixir programming language.
+
+[![NUU Group Documents](https://img.shields.io/badge/NUU%20Group-Documents-blue.svg)](https://nuu.co/)
 
 ## Table of Contents
 
