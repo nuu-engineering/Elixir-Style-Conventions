@@ -2,6 +2,8 @@
 ---
 [![NUU Group Documents](https://img.shields.io/badge/NUU%20Group-Documents-blue.svg)](https://nuu.co/)
 
+Guide for homogeneous coding in projects that require the use of the Elixir programming language.
+
 ## Table of Contents
 
 - [**Guide**](#guide)
@@ -24,8 +26,6 @@
   - [Attribution](#attribution)
 
 ## Guide
-
-Guide for homogeneous coding in projects that require the use of the Elixir programming language.
 
 ### Source Code Layout
 

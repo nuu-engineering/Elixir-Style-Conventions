@@ -2,6 +2,8 @@
 ---
 [![NUU Group Documents](https://img.shields.io/badge/NUU%20Group-Documents-blue.svg?style=flat)](https://nuu.co/)
 
+Guía para la codificación homogenea en proyectos que requieran el uso del lenguaje de programación Elixir.
+
 ## Tabla de Contenido
 
 - [**Guía**](#guía)
@@ -24,8 +26,6 @@
   - [Atribución](#atribución)
 
 ## Guía
-
-Guía para la codificación homogenea en proyectos que requieran el uso del lenguaje de programación Elixir.
 
 ### Disposición del Código Fuente (Layout)
 
