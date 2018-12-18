@@ -1,7 +1,7 @@
 ![Convenciones de Estilo NUU: Lenguaje de Programación Elixir](images/logo.es_ES.png)
 ---
 
-Guía para la codificación homogenea en proyectos que requieran el uso del lenguaje de programación Elixir.
+Guía para la codificación homogenea en proyectos que requieran el uso del lenguaje de programación [Elixir](https://elixir-lang.org/).
 
 [![NUU Group Documents](https://img.shields.io/badge/NUU%20Group-Documents-blue.svg?style=flat)](https://nuu.co/)
 
