@@ -1163,7 +1163,7 @@ Los tipos propios deben de ser definidos en la parte superior del módulo junto 
 
 ### Licencia
 
-![Creative Commons License](http://i.creativecommons.org/l/by/3.0/88x31.png) Este documento está hecho bajo licencia [Creative Commons Reconocimiento 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/deed.es_ES).
+![Creative Commons License](http://i.creativecommons.org/l/by/3.0/88x31.png) Este documento está publicado bajo licencia [Creative Commons Reconocimiento 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/deed.es_ES).
 
 ### Atribución
 
